@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <input type="button" value="开始" @click="start">
+    <input type="button" value="暂停" @click="stop">
+
+    <h3>{{ msg }}</h3>
+</div>
+
+
+<script>
+    const vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'ABCDEFGHIJK',
+            intervalId:null
+        },
+        methods:{
+            start(){
+                if (this.intervalId !== null){
+                    return;
+                }else {
+                    this.intervalId = setInterval(() => {
+                        const header = this.msg.substring(0,1)
+                        const body = this.msg.substring(1)
+                        this.msg = body + header
+                    },300)
+                }
+            },
+            stop(){
+                clearInterval(this.intervalId)
+                this.intervalId = null
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

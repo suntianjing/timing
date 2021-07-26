@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+
+<div id="app">
+
+</div>
+
+
+
+<script>
+    Vue.component('cmt-item',{
+      template:'<li>\n' +
+              '        <h3>评论人：{{ item.name }}</h3>\n' +
+              '        <h5>评论内容：{{ item.content }}</h5>\n' +
+              '      </li>',
+    })
+
+    Vue.component('cmt-box')
+
+
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            list: [
+                {name: 'zs', content: '沙发'},
+                {name: 'ls', content: '板凳'},
+                {name: 'qqq', content: '凉席'},
+                {name: 'eee', content: '砖头'}
+            ]
+        },
+        methods: {},
+        components: {}
+    })
+</script>
+
+
+</body>
+</html>

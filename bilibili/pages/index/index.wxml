@@ -1,0 +1,8 @@
+<view class="main">
+
+    <!-- 头部 -->
+    <MyTitle></MyTitle>
+
+    <mytest></mytest>
+
+</view>

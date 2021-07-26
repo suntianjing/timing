@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+
+<div id="app">
+  <com1 :msgobj="msgObj"></com1>
+</div>
+
+
+<script>
+
+
+
+  const vm = new Vue({
+    el:'#app',
+    data:{
+      msgObj: {
+        address: '北京',
+        location: '顺义····马坡南'
+      }
+    },
+    methods:{
+
+    },
+    components:{
+      'com1':{
+        template:'<h3>hahaha {{ msgobj }}</h3>',
+        props:['msgobj']
+      }
+    }
+  })
+</script>
+
+
+</body>
+</html>

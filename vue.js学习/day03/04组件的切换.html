@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+
+<div id="app">
+    <input type="button" value="显示登录" @click="flag=true">
+    <input type="button" value="显示注册" @click="flag=false">
+    <login v-if="flag"></login>
+    <reg v-else="flag"></reg>
+    <!--    <login></login>-->
+    <!--    <reg></reg>-->
+</div>
+
+
+<script>
+
+    Vue.component('login', {
+        template: `<div>
+        用户名：<input type="text" /><br/>
+        密码：<input type="text" /><br/>
+        <input type="button" value="登录" />
+      </div>`
+    })
+
+    Vue.component('reg', {
+        template: '<h3>注册组件</h3>'
+    })
+
+
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            flag: false
+        },
+        methods: {}
+    })
+</script>
+
+
+</body>
+</html>

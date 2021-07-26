@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <div id="inner" @click.self="innerClick">
+        <input type="button" value="按钮" @click.once="btnClick">
+    </div>
+</div>
+</div>
+
+
+<script>
+    const vm = new Vue({
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+            innerClick() { // 内部div的点击事件
+                console.log('内部的Div被点击了')
+            },
+            btnClick() { // 按钮的点击事件
+                console.log('按钮被点击了')
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
