@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/axios/0.21.1/axios.js" type="application/javascript"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+	<script>
+        axios.get('https://www.fastmock.site/mock/c2d703b29ffa155bbb3ea7e2e66655a8/test/hello')
+            .then(function (response) {
+                console.log(response.data.city);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    </script>
+    
+    
+</body>
+</html>
