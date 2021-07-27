@@ -1,22 +1,34 @@
 <template>
   <div>
-      {{ '这是一个新组件' }}
+      <ul>
+        <li v-for="value,key,index in objData" :key="index">
+          {{ index+1 }} {{ key + ' : ' }} {{ value }}
+        </li>
+      </ul>
   </div>
 </template>
 
 <script>
+
+import axios from 'axios'
 export default {
-  name: 'abar',
+  name: 'MyData',
 
 
   data() {
     return {
-      msg:'ssswwuwuwuw'
+      objData:{
+
+      }
     };
   },
 
   mounted() {
-    
+    var that = this
+    axios.get('https://www.fastmock.site/mock/a15186ac9e82089678e43d39dd52698c/eleme/msg').then(function(response){
+      console.log(response.data)
+      that.objData = response.data
+    })
   },
 
   methods: {
