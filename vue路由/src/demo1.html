@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../lib/vue.js"></script>
+    <script src="../lib/vue-router.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+      <!-- 创建两个 hash 链接地址 -->
+      <router-link to="/login">登录</router-link>
+      <router-link to="/reg">注册</router-link>
+  
+      <!-- 路由组件的容器 -->
+      <router-view></router-view>
+    </div>
+  
+    <script>
+  
+      const login = {
+        template: '<h3>登录组件</h3>'
+      }
+  
+      const reg = {
+        template: '<h3>注册组件</h3>'
+      }
+  
+      // 创建路由对象
+      const router = new VueRouter({
+        routes: [ // 路由规则的数组，里面放的是每个 hash 到 组件的对应关系
+          { path: '/login', component: login },
+          { path: '/reg', component: reg },
+        ]
+      })
+  
+      // 创建 Vue 实例，得到 ViewModel
+      var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {},
+        router: router
+      });
+    </script>
+  </body>
+
+</html>

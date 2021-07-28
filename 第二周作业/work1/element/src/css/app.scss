@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#app{
+    width: 90%;
+    margin: 0 auto;
+
+    .search{
+        margin: 20px auto;
+        p{
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+
+    .room_name{
+        color: #409EFF;
+    }
+    
+}
