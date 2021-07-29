@@ -1,18 +1,20 @@
 <template>
   <div class="aside">
     <el-menu
-        default-active="2"
-        class="el-menu-vertical-demo"
+        default-active="1"
+        class="el-menu-vertical-demo menu"
+        active-text-color="#00c896"
         @open="handleOpen"
-        @close="handleClose">
+        @close="handleClose"
+        @select="handleSelect">
       <el-menu-item index="1">
-        <i class="el-icon-menu"></i>
+        <i class="el-icon-s-home"></i>
         <span slot="title">主页</span>
       </el-menu-item>
 
       <el-submenu index="2">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-s-management"></i>
           <span>管理</span>
         </template>
         <el-menu-item-group>
@@ -23,19 +25,19 @@
 
       <el-submenu index="3">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-s-promotion"></i>
           <span>涨粉</span>
         </template>
         <el-menu-item-group>
           <el-menu-item index="3-1">赞助自习室</el-menu-item>
           <el-menu-item index="3-2">答疑</el-menu-item>
-          <el-menu-item index="3-3">举办live</el-menu-item>
+          <el-menu-item index="3-3">举办Live</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
 
       <el-submenu index="4">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-s-flag"></i>
           <span>创收</span>
         </template>
         <el-menu-item-group>
@@ -45,11 +47,12 @@
       </el-submenu>
 
       <el-menu-item index="5">
-        <i class="el-icon-menu"></i>
+        <i class="el-icon-money"></i>
         <span slot="title">我的资产</span>
       </el-menu-item>
+
       <el-menu-item index="6">
-        <i class="el-icon-menu"></i>
+        <i class="el-icon-data-line"></i>
         <span slot="title">我的网盘</span>
       </el-menu-item>
 
@@ -79,6 +82,10 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
+      this.$emit('togglePage',key);
     },
   },
 };

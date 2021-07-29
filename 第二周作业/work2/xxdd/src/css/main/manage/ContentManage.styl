@@ -1,0 +1,96 @@
+theme-color = #00c896
+theme-hover-color = #e6faf5
+
+.cm-wrapper
+  position relative
+.publish-diary
+  background-color theme-color
+  color #fff
+  position absolute
+  right 0
+  top 0
+  margin 10px 20px 0 0
+  z-index 1
+  &:hover
+    background-color theme-color
+    color #fff
+  &:focus
+    background-color theme-color
+    border-color theme-color
+    color #fff
+.title
+  color: #868686
+  font-size 14px
+  .title-more
+    cursor pointer
+    color theme-color
+.list-item
+  margin-top 10px
+  display flex
+  .avatar
+    width 32px
+    height 32px
+    img
+      width 100%
+      border-radius 50%
+  .user
+    width 100%
+    margin-left 10px
+    .name
+      font-size 14px
+    .time
+      margin-top 3px
+      font-size 12px
+      color #8b8b8b
+    .brief
+      margin 5px 0
+      font-size 12px
+    .pic
+      display flex
+      img
+        padding-right 10px
+        width 100px
+        height 100px
+    .act
+      margin-top 10px
+      font-size 12px
+      color: #8b8b8b
+      display flex
+      i
+        cursor pointer
+        margin-right 10px
+        span
+          padding-left 5px
+        &:hover
+          color theme-color
+    .el-divider
+      margin-top 10px
+      margin-bottom 0
+  .delete
+    cursor pointer
+    height 20px
+    &:hover
+      color theme-color
+
+#tab-first
+  padding-left 16px
+.el-tabs__item.is-active
+  color theme-color
+.el-tabs__active-bar
+  background-color theme-color
+  height 4px
+  border-radius 5px
+.el-tabs__item:hover
+  color theme-color
+
+.el-pagination
+  position absolute
+  display inline-block
+  bottom 10px
+  right 0
+.el-pagination.is-background .el-pager li:not(.disabled).active
+  background-color theme-color
+.el-pagination.is-background .el-pager li:not(.disabled):hover
+  color theme-color
+.el-pagination.is-background .el-pager li:not(.disabled).active:hover
+  color #fff

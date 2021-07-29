@@ -1,0 +1,72 @@
+.hp-wrapper {
+  width: 1000px;
+  height: 100%;
+  margin-top: 20px;
+}
+.hp-wrapper .notice {
+  height: 100px;
+  line-height: 100px;
+}
+.hp-wrapper .notice .el-card__body {
+  padding: 0 0 0 40px;
+  color: #999;
+}
+.hp-wrapper .notice .el-card__body span {
+  margin-left: 20px;
+}
+.hp-wrapper .notice .el-card__body .title {
+  padding: 10px;
+  background-color: #ffc524;
+  color: #fff;
+}
+.hp-wrapper .notice .el-card__body .more {
+  color: #00c896;
+}
+.hp-wrapper .numbers {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.hp-wrapper .numbers .el-card__body {
+  box-sizing: border-box;
+  width: 230px;
+  height: 140px;
+}
+.hp-wrapper .numbers .el-card__body .card-left {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+.hp-wrapper .numbers .el-card__body .card-left img {
+  width: 50px;
+  height: 50px;
+}
+.hp-wrapper .numbers .el-card__body .card-right {
+  float: left;
+}
+.hp-wrapper .numbers .el-card__body .card-right p {
+  font-size: 14px;
+  color: rgba(75,75,75,0.6);
+}
+.hp-wrapper .diary {
+  margin-top: 20px;
+  height: 500px;
+  background-color: #fff;
+}
+.hp-wrapper .diary #tab-first {
+  padding-left: 16px;
+}
+.hp-wrapper .diary .el-tabs__item.is-active {
+  color: #00c896;
+}
+.hp-wrapper .diary .el-tabs__item:hover {
+  color: #00c896;
+}
+.hp-wrapper .diary .el-tabs__active-bar {
+  background-color: #00c896;
+  height: 4px;
+  border-radius: 5px;
+}

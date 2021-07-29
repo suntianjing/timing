@@ -1,0 +1,121 @@
+.cm-wrapper {
+  position: relative;
+}
+.publish-diary {
+  background-color: #00c896;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px 20px 0 0;
+  z-index: 1;
+}
+.publish-diary:hover {
+  background-color: #00c896;
+  color: #fff;
+}
+.publish-diary:focus {
+  background-color: #00c896;
+  border-color: #00c896;
+  color: #fff;
+}
+.title {
+  color: #868686;
+  font-size: 14px;
+}
+.title .title-more {
+  cursor: pointer;
+  color: #00c896;
+}
+.list-item {
+  margin-top: 10px;
+  display: flex;
+}
+.list-item .avatar {
+  width: 32px;
+  height: 32px;
+}
+.list-item .avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+.list-item .user {
+  width: 100%;
+  margin-left: 10px;
+}
+.list-item .user .name {
+  font-size: 14px;
+}
+.list-item .user .time {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #8b8b8b;
+}
+.list-item .user .brief {
+  margin: 5px 0;
+  font-size: 12px;
+}
+.list-item .user .pic {
+  display: flex;
+}
+.list-item .user .pic img {
+  padding-right: 10px;
+  width: 100px;
+  height: 100px;
+}
+.list-item .user .act {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #8b8b8b;
+  display: flex;
+}
+.list-item .user .act i {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.list-item .user .act i span {
+  padding-left: 5px;
+}
+.list-item .user .act i:hover {
+  color: #00c896;
+}
+.list-item .user .el-divider {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.list-item .delete {
+  cursor: pointer;
+  height: 20px;
+}
+.list-item .delete:hover {
+  color: #00c896;
+}
+#tab-first {
+  padding-left: 16px;
+}
+.el-tabs__item.is-active {
+  color: #00c896;
+}
+.el-tabs__active-bar {
+  background-color: #00c896;
+  height: 4px;
+  border-radius: 5px;
+}
+.el-tabs__item:hover {
+  color: #00c896;
+}
+.el-pagination {
+  position: absolute;
+  display: inline-block;
+  bottom: 10px;
+  right: 0;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: #00c896;
+}
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+  color: #00c896;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active:hover {
+  color: #fff;
+}
