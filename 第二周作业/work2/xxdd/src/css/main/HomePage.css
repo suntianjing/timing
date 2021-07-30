@@ -1,7 +1,6 @@
 .hp-wrapper {
-  width: 1000px;
+  width: 100%;
   height: 100%;
-  margin-top: 20px;
 }
 .hp-wrapper .notice {
   height: 100px;
@@ -47,13 +46,17 @@
 .hp-wrapper .numbers .el-card__body .card-right {
   float: left;
 }
+.hp-wrapper .numbers .el-card__body .card-right h2 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
 .hp-wrapper .numbers .el-card__body .card-right p {
   font-size: 14px;
   color: rgba(75,75,75,0.6);
 }
 .hp-wrapper .diary {
   margin-top: 20px;
-  height: 500px;
+  border: none;
   background-color: #fff;
 }
 .hp-wrapper .diary #tab-first {

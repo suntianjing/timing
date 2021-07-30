@@ -3,6 +3,18 @@ theme-hover-color = #e6faf5
 
 .cm-wrapper
   position relative
+  .tabs
+    #tab-first
+      padding-left 16px
+    .el-tabs__item.is-active
+      color theme-color
+    .el-tabs__item:hover
+      color theme-color
+    .el-tabs__active-bar
+      background-color theme-color
+      height 4px
+      border-radius 5px
+
 .publish-diary
   background-color theme-color
   color #fff
@@ -19,6 +31,8 @@ theme-hover-color = #e6faf5
     border-color theme-color
     color #fff
 .title
+  margin 10px auto
+  text-indent 2em
   color: #868686
   font-size 14px
   .title-more
@@ -69,28 +83,23 @@ theme-hover-color = #e6faf5
   .delete
     cursor pointer
     height 20px
+    margin-right 10px
     &:hover
       color theme-color
 
-#tab-first
-  padding-left 16px
-.el-tabs__item.is-active
-  color theme-color
-.el-tabs__active-bar
-  background-color theme-color
-  height 4px
-  border-radius 5px
-.el-tabs__item:hover
-  color theme-color
+.upload
+  position: absolute;
+  right 0
+  top 0
+  padding 10px
+  background-color #00c896
+  z-index 10
 
 .el-pagination
   position absolute
   display inline-block
   bottom 10px
   right 0
+
 .el-pagination.is-background .el-pager li:not(.disabled).active
   background-color theme-color
-.el-pagination.is-background .el-pager li:not(.disabled):hover
-  color theme-color
-.el-pagination.is-background .el-pager li:not(.disabled).active:hover
-  color #fff

@@ -1,6 +1,20 @@
 .cm-wrapper {
   position: relative;
 }
+.cm-wrapper .tabs #tab-first {
+  padding-left: 16px;
+}
+.cm-wrapper .tabs .el-tabs__item.is-active {
+  color: #00c896;
+}
+.cm-wrapper .tabs .el-tabs__item:hover {
+  color: #00c896;
+}
+.cm-wrapper .tabs .el-tabs__active-bar {
+  background-color: #00c896;
+  height: 4px;
+  border-radius: 5px;
+}
 .publish-diary {
   background-color: #00c896;
   color: #fff;
@@ -20,6 +34,8 @@
   color: #fff;
 }
 .title {
+  margin: 10px auto;
+  text-indent: 2em;
   color: #868686;
   font-size: 14px;
 }
@@ -86,23 +102,18 @@
 .list-item .delete {
   cursor: pointer;
   height: 20px;
+  margin-right: 10px;
 }
 .list-item .delete:hover {
   color: #00c896;
 }
-#tab-first {
-  padding-left: 16px;
-}
-.el-tabs__item.is-active {
-  color: #00c896;
-}
-.el-tabs__active-bar {
+.upload {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
   background-color: #00c896;
-  height: 4px;
-  border-radius: 5px;
-}
-.el-tabs__item:hover {
-  color: #00c896;
+  z-index: 10;
 }
 .el-pagination {
   position: absolute;
@@ -112,10 +123,4 @@
 }
 .el-pagination.is-background .el-pager li:not(.disabled).active {
   background-color: #00c896;
-}
-.el-pagination.is-background .el-pager li:not(.disabled):hover {
-  color: #00c896;
-}
-.el-pagination.is-background .el-pager li:not(.disabled).active:hover {
-  color: #fff;
 }

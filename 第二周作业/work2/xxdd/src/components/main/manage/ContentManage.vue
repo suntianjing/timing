@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper cm-wrapper">
-    <!--用户管理-->
-    <el-tabs v-model="activeName">
+    <!--学习日记-->
+    <el-tabs v-model="activeName" class="tabs">
       <el-tab-pane :label="'学习日记' + diaryTotal" name="first">
         <div class="title">
           <span class="title-main">在Timing中，用户会用“学习日记”来记录学习历程、分享学习经验，“学习日记”有 文字+图片 和 文字+视频 两种样式。一篇好的“学习日记”，能够获得大量的曝光，吸引更多人的关注。</span>
@@ -35,12 +35,12 @@
       <el-tab-pane :label="'长视频' + videoTotal" name="second">
         暂时没有长视频
       </el-tab-pane>
-    </el-tabs>
 
+    </el-tabs>
+    <el-button class="publish-diary">发布学习日记</el-button>
     <!-- 分页器 -->
     <el-pagination small
                    @current-change="handleCurrentChange"
-                   background
                    :page-size="pagesize"
                    layout="prev, pager, next"
                    :total="diaryTotal"></el-pagination>

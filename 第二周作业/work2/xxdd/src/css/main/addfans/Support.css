@@ -1,0 +1,144 @@
+.title span:nth-child(1) {
+  color: #9d9d9d;
+}
+.title span:nth-child(2) {
+  margin: 0 10px;
+}
+.title span:nth-child(3) {
+  color: #000;
+}
+.el-divider {
+  margin: 12px 0;
+}
+.step p:last-of-type {
+  font-size: 14px;
+  color: #9d9d9d;
+  margin-top: 5px;
+}
+.step .form {
+  margin-top: 15px;
+}
+.step .form .el-form-item__label {
+  text-align: left;
+}
+.step .form .el-form-item__content {
+  display: flex;
+}
+.step .form .el-form-item__content .sample {
+  margin-right: 10px;
+}
+.step .form .el-form-item__content .sample .s-title {
+  color: #9d9d9d;
+  font-size: 12px;
+}
+.step .form .el-form-item__content .sample .s-pic {
+  margin-top: -10px;
+}
+.step .form .el-form-item__content .sample .s-pic img {
+  width: 190px;
+  height: 108px;
+}
+.step .form .el-form-item__content .upload .u-title {
+  color: #9d9d9d;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.step .form .el-form-item__content .upload .u-pic {
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+.step .form .el-form-item__content .upload .u-pic img {
+  width: 190px;
+  height: 108px;
+}
+.step .form .el-form-item__content .upload .u-pic .tip {
+  margin-top: 0;
+}
+.step .form .el-form-item__content .upload .u-pic .idcard-uploader {
+  width: 190px;
+  height: 108px;
+}
+.step .form .el-form-item__content .upload .u-pic .idcard-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.step .form .el-form-item__content .upload .u-pic .idcard-uploader .el-upload:hover {
+  border-color: #00c896;
+}
+.step .form .el-form-item__content .upload .u-pic .idcard-uploader .idcard-uploader-icon {
+  padding-top: 28px;
+  font-size: 28px;
+  color: #00c896;
+  width: 190px;
+  text-align: center;
+}
+.step .form .el-form-item__content .upload .u-pic .idcard-uploader .id-pic {
+  width: 190px;
+  height: 108px;
+  display: block;
+}
+.two .prize .el-form-item__content {
+  display: block;
+}
+.two .prize .prize-tip {
+  width: 100%;
+  margin-top: 0;
+}
+.two .prize .el-textarea__inner {
+  width: 500px;
+}
+.two .prize .el-textarea__inner:focus {
+  border-color: #00c896;
+}
+.two .upload-certificate .el-form-item__content {
+  display: block;
+}
+.two .submit .el-form-item__content {
+  display: block;
+}
+.two .submit .warn {
+  color: #8b8b8b;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+.two .submit .submit-btn {
+  width: 150px;
+  background-color: #00c896;
+  color: #fff;
+}
+.two .submit .submit-btn:hover {
+  background-color: #00c896;
+  color: #fff;
+}
+.two .submit .submit-btn:focus {
+  background-color: #00c896;
+  border-color: #00c896;
+  color: #fff;
+}
+.el-select .el-input__inner:focus,
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus {
+  border-color: #00c896;
+}
+.el-input--suffix .el-input__inner {
+  width: 400px;
+}
+.el-input__inner {
+  width: 400px;
+}
+.el-upload--picture-card {
+  background-color: #fff;
+}
+.el-upload--picture-card i {
+  color: #00c896;
+}
+.el-upload--picture-card:hover {
+  color: #00c896;
+  border-color: #00c896;
+}
+.el-upload--picture-card:focus {
+  border-color: #00c896;
+}

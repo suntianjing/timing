@@ -1,0 +1,117 @@
+theme-color = #00c896
+theme-hover-color = #e6faf5
+
+.title
+  span:nth-child(1)
+    color #9d9d9d
+  span:nth-child(2)
+    margin 0 10px
+  span:nth-child(3)
+    color #000
+.el-divider
+  margin 12px 0
+.step
+  p:last-of-type
+    font-size 14px
+    color #9d9d9d
+    margin-top 5px
+  .form
+    margin-top 15px
+    .el-form-item__label
+      text-align left
+    .el-form-item__content
+      display flex
+      .sample
+        margin-right 10px
+        .s-title
+          color #9d9d9d
+          font-size 12px
+        .s-pic
+          margin-top -10px
+          img
+            width 190px
+            height 108px
+      .upload
+        .u-title
+          color #9d9d9d
+          font-size 12px
+          margin-bottom 2px
+        .u-pic
+          margin-top -10px
+          margin-bottom 15px
+          img
+            width 190px
+            height 108px
+          .tip
+            margin-top 0
+          .idcard-uploader
+            width 190px
+            height 108px
+            .el-upload
+              border 1px dashed #d9d9d9
+              border-radius 6px
+              cursor pointer
+              position relative
+              overflow hidden
+            .el-upload:hover
+              border-color: theme-color
+            .idcard-uploader-icon
+              padding-top 28px
+              font-size 28px
+              color theme-color
+              width 190px
+              text-align center
+            .id-pic
+              width 190px
+              height 108px
+              display block
+
+.two
+  .prize
+    .el-form-item__content
+      display block
+    .prize-tip
+      width 100%
+      margin-top 0
+    .el-textarea__inner
+      width 500px
+    .el-textarea__inner:focus
+      border-color theme-color
+  .upload-certificate
+    .el-form-item__content
+      display block
+  .submit
+    .el-form-item__content
+      display block
+    .warn
+      color #8b8b8b
+      line-height 20px
+      margin-bottom 15px
+    .submit-btn
+      width 150px
+      background-color theme-color
+      color #fff
+      &:hover
+        background-color theme-color
+        color #fff
+      &:focus
+        background-color theme-color
+        border-color theme-color
+        color #fff
+
+.el-select .el-input__inner:focus,
+.el-input.is-active .el-input__inner, .el-input__inner:focus
+  border-color theme-color
+.el-input--suffix .el-input__inner
+  width 400px
+.el-input__inner
+  width 400px
+.el-upload--picture-card
+  background-color #fff
+  i
+    color theme-color
+  &:hover
+    color theme-color
+    border-color theme-color
+  &:focus
+    border-color theme-color
