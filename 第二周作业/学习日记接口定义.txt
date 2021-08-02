@@ -1,0 +1,31 @@
+用户名 name
+发布时间 time
+日记内容  brief
+
+图片数组  pic
+
+点赞量  likeNum
+评论量  commentNum
+分享量  shareNum
+
+
+{
+  
+  'arrays|50-100':[
+  {
+      'avatar':'@image("32x32","#02adea","Icon")',
+      'name':'@name(true)',
+      'time':'@datetime()',
+      'brief':'@csentence(10,30)',
+      'pic|1-4':[
+          '@image("100x100","#00405d","Hello")'
+      ],
+      'likeNum':'@natural(1,300)',
+      'commentNum':'@natural(1,300)',
+      'shareNum':'@natural(1,300)',
+  } 
+    
+  ]
+  
+  
+}
