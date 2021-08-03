@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <div class="header">
-      <van-nav-bar title="排骨饭" left-text="返回" left-arrow fixed="true" placeholder="true">
+      <van-nav-bar title="排骨饭" >
+        <template #left >
+          <div @click="goback">&lt;&nbsp;返回</div>
+        </template>
+
         <template #right>
           <van-icon name="share-o" size="20px" />
           <van-cell title="分享" style="padding-left: 5px" @click="showShare = true" />
@@ -15,9 +19,15 @@
       </van-nav-bar>
     </div>
 
-    <div class="content">
-      <router-view></router-view>
-    </div>
+    <van-pull-refresh
+        v-model="isLoading"
+        @refresh="onRefresh"
+        success-text="刷新成功"
+    >
+      <div class="content">
+        <router-view></router-view>
+      </div>
+    </van-pull-refresh>
 
     <div class="footer">
       <van-tabbar route v-model="active">
@@ -40,6 +50,7 @@ export default {
 
   data() {
     return {
+      isLoading: false,
       showShare: false,
       options: [
         { name: '微信', icon: 'wechat' },
@@ -60,10 +71,23 @@ export default {
       Toast(option.name);
       this.showShare = false;
     },
+    goback(){
+      this.$router.go(-1);
+      console.log('xixiixi')
+    },
+    onRefresh() {
+      setTimeout(() => {
+        Toast('刷新成功');
+        this.isLoading = false;
+        this.count++;
+      }, 1000);
+    },
   },
 };
 </script>
 
 <style lang="scss">
+
+
 
 </style>

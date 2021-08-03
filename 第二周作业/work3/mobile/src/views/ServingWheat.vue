@@ -53,20 +53,20 @@
     </div>
 
     <div class="saying">
-      <van-button
-          class="saying-btn"
-          :loading="isLoading"
-          loading-type="spinner"
-          color="#f57876"
-          round type="info"
-          @click="isLoading = !isLoading"
-      >
+      <span @click="isLoading=!isLoading">
+        <van-button
+            class="saying-btn"
+            :loading="isLoading"
+            loading-type="spinner"
+            color="#f57876"
+            round type="info"
+        >
         按住说话，插一句
       </van-button>
+      </span>
     </div>
 
     <!--弹出层-->
-
     <van-popup class="props" position="bottom" round v-model="show" style="height: 50%;">
       <div class="prop">
         <div class="info">
