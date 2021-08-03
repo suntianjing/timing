@@ -4,6 +4,7 @@ import IndexPage from "../views/IndexPage";
 import MyMsg from "../views/MyMsg";
 import ServingWheat from "../views/ServingWheat";
 import test from "../views/test";
+import RandomJoin from "../views/RandomJoin";
 
 Vue.use(VueRouter)
 
@@ -31,6 +32,11 @@ const routes = [
     path: '/test',
     name:'test',
     component: test
+  },
+  {
+    path:'/join',
+    name:'RandomJoin',
+    component: RandomJoin
   }
 
 ]

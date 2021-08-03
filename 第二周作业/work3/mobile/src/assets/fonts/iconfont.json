@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3786914",
+      "name": "麦克风",
+      "font_class": "yanjizhushou-shangchuan_maikefeng",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "9974761",
+      "name": "加",
+      "font_class": "jia",
+      "unicode": "e711",
+      "unicode_decimal": 59153
+    },
+    {
+      "icon_id": "14055531",
+      "name": "VIP",
+      "font_class": "VIP1",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "19689518",
+      "name": "静音",
+      "font_class": "audiostatic",
+      "unicode": "eb70",
+      "unicode_decimal": 60272
+    }
+  ]
+}

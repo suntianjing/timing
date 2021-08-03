@@ -23,7 +23,7 @@
       <div class="time">
         <p class="date">2月3日,星期五</p>
         <h3>距离收盘</h3>
-        <h2>08:30:40</h2>
+        <h2><van-count-down class="count" :time="30 * 60 * 60 * 1000" /></h2>
         <p class="leave">本月还剩15个交易日</p>
       </div>
       </van-circle>
@@ -57,8 +57,8 @@
     </div>
 
     <div class="operate-btn">
-      <van-button icon="add-o" class="create" color="#ff6361"  round to="/Serving">创建房间</van-button>
-      <van-button icon="smile-comment-o" class="join" color="#ffa63d"  round>随机加入</van-button>
+      <van-button icon="add-o" class="create" color="#ff6361" round to="/join" >创建房间</van-button>
+      <van-button icon="smile-comment-o" class="join" color="#ffa63d" round to="/Serving">随机加入</van-button>
     </div>
 
   </div>
@@ -130,6 +130,11 @@ export default {
         font-size: 16px;
       }
       h2{
+        color: #f57876;
+        font-size: 30px;
+        margin: 0px auto;
+      }
+      .count{
         color: #f57876;
         font-size: 30px;
         margin: 0px auto;

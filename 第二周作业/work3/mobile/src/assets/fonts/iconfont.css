@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1627976119137') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yanjizhushou-shangchuan_maikefeng:before {
+  content: "\e62e";
+}
+
+.icon-jia:before {
+  content: "\e711";
+}
+
+.icon-VIP1:before {
+  content: "\e60c";
+}
+
+.icon-audiostatic:before {
+  content: "\eb70";
+}
+

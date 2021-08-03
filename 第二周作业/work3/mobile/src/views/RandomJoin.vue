@@ -37,6 +37,10 @@
         </ul>
       </div>
     </div>
+    <div class="gogogo" @click="gogogo">
+      <van-icon class="add" name="plus" />
+      <p>点击上麦</p>
+    </div>
 
     <div class="footer">
       <div class="audience">
@@ -53,16 +57,17 @@
     </div>
 
     <div class="saying">
-      <van-button
-          class="saying-btn"
-          :loading="isLoading"
-          loading-type="spinner"
-          color="#f57876"
-          round type="info"
-          @click="isLoading = !isLoading"
-      >
-        按住说话，插一句
-      </van-button>
+      <div class="voice-btn" v-if="is_sound" @click="is_sound=!is_sound">
+        <van-icon class="iconfont" class-prefix="icon" name="audiostatic" />
+        <p>静音</p>
+      </div>
+      <div class="novoice-btn" v-else @click="is_sound=!is_sound">
+        <van-icon class="iconfont" class-prefix="icon" name="yanjizhushou-shangchuan_maikefeng" />
+        <p>静音</p>
+      </div>
+
+      <button class="exit">下麦</button>
+
     </div>
 
     <!--弹出层-->
@@ -97,7 +102,7 @@
 </template>
 
 <script>
-import { Notify } from 'vant';
+import {Dialog, Notify} from 'vant';
 import axios from 'axios'
 export default {
   name: 'ServingWheat',
@@ -111,6 +116,7 @@ export default {
       audience_list:[],
       popupData:{},
       popup_index:0,
+      is_sound:false,
     };
   },
 
@@ -118,13 +124,13 @@ export default {
     var that = this;
     axios
         .get(
-            'https://www.fastmock.site/mock/a8ded3f1b4edb45596cdbc75423d3250/paigu/room_list'
+            'https://www.fastmock.site/mock/a8ded3f1b4edb45596cdbc75423d3250/paigu/join'
         )
-    .then(function (response) {
-      console.log(response.data.arrays);
-      that.teacher_list = response.data.arrays;
-      that.audience_list = response.data.audience;
-    })
+        .then(function (response) {
+          console.log(response.data.arrays);
+          that.teacher_list = response.data.arrays;
+          that.audience_list = response.data.audience;
+        })
   },
 
   methods: {
@@ -148,12 +154,32 @@ export default {
         color:'#fff',
         background:'grey',
       })
-    }
+    },
+
+    gogogo(){
+      Dialog.confirm({
+        title: '上麦',
+        message: '是否上麦？',
+      })
+          .then(() => {
+            // on confirm
+            this.teacher_list.push({
+              "name":"孙天靖",
+              "time":9,
+              "money":80,
+              "iconUrl":"https://img0.baidu.com/it/u=3648032945,4064834009&fm=26&fmt=auto&gp=0.jpg"
+            })
+          })
+          .catch(() => {
+            // on cancel
+          });
+    },
+
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 .serving {
   .header {
@@ -208,6 +234,7 @@ export default {
           margin-bottom: 15px;
           margin-left: 10px;
           box-sizing:border-box;
+
 
           p {
             margin: 0 auto;
@@ -323,8 +350,30 @@ export default {
     }
   }
 
+  .gogogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 9rem;
+    border-radius: 1rem;
+    padding: 2px;
+    background-color: #fdf8f0;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    box-sizing:border-box;
+    color: #d9ccb6;
+    .add{
+      font-size: 30px;
+    }
+    p{
+
+    }
+  }
+
   .footer {
-    margin-bottom: 120px;
+    margin-bottom: 150px;
     .audience {
       h2 {
         color: #acacac;
@@ -362,88 +411,126 @@ export default {
 
   .saying {
     position: fixed;
-    bottom: 60px;
+    bottom: 80px;
     width: 100%;
     text-align: center;
 
-    .saying-btn {
-      width: 60%;
-      height: 40px;
+    .voice-btn{
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      color: #f57876;
+      border-radius: 50%;
+      border: 1.8px solid #f57876;
+      background-color: #fff;
+      .iconfont{
+        font-size: 20px;
+      }
+      p{
+        font-size: 6px;
+        margin: 0;
+      }
+    }
+    .novoice-btn{
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      color: #7a7a7a;
+      border-radius: 50%;
+      border: 1.8px solid #7a7a7a;
+      background-color: #fff;
+      .iconfont{
+        font-size: 20px;
+      }
+      p{
+        font-size: 6px;
+        margin: 0;
+      }
+    }
+    //下麦
+    .exit{
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      background-color: #ffffff;
+      color: #454545;
+      border: 1.5px solid #454545;
+      border-radius: 18px;
+      padding: 3px 6px;
     }
   }
 
   //弹出层
   .props {
     background-color: #f1f2f4;
-  }
+    .prop {
+      padding: 15px;
 
-  .prop {
-    padding: 15px;
+      .info {
+        display: flex;
+        justify-content: space-between;
 
-    .info {
-      display: flex;
-      justify-content: space-between;
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
 
-      img {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
+        }
 
-      }
-
-      button {
-        background-color: #f1f2f4;
-        border-radius: 10px;
-        border: 1px solid #f2a3a3;
-        color: #f2a3a3;
-        padding: 4px 14px;
-        margin-top: 30px;
-        height: 30px;
-      }
-    }
-
-    .user-data {
-      p {
-        color: #aaaeb5;
-        font-size: 14px;
-
-        span {
-          font-size: 24px;
-          font-weight: bold;
-          margin-right: 5px;
-          color: black;
+        button {
+          background-color: #f1f2f4;
+          border-radius: 10px;
+          border: 1px solid #f2a3a3;
+          color: #f2a3a3;
+          padding: 4px 14px;
+          margin-top: 30px;
+          height: 30px;
         }
       }
-    }
 
-    .user-msg {
-      margin-top: 15px;
+      .user-data {
+        p {
+          color: #aaaeb5;
+          font-size: 14px;
 
-      p {
-        margin: 5px auto;
-        font-size: 14px;
+          span {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 5px;
+            color: black;
+          }
+        }
       }
 
-      .money {
-        color: #787776;
+      .user-msg {
+        margin-top: 15px;
+
+        p {
+          margin: 5px auto;
+          font-size: 14px;
+        }
+
+        .money {
+          color: #787776;
+        }
       }
-    }
 
-    .exit {
-      width: 100%;
-      text-align: center;
+      .exit {
+        width: 100%;
+        text-align: center;
 
-      .exit-btn {
-        color: #414141;
-        background-color: #fff;
-        border-radius: 16px;
-        border: none;
-        width: 80%;
-        height: 36px;
-        margin: 20px auto;
+        .exit-btn {
+          color: #414141;
+          background-color: #fff;
+          border-radius: 16px;
+          border: none;
+          width: 80%;
+          height: 36px;
+          margin: 20px auto;
+        }
       }
-    }
 
+    }
   }
 
 }
