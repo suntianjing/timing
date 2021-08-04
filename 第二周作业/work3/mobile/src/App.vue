@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <div class="header">
-      <van-nav-bar title="排骨饭" >
-        <template #left >
+      <van-nav-bar title="排骨饭">
+        <template #left>
           <div @click="goback">&lt;&nbsp;返回</div>
         </template>
 
         <template #right>
-          <van-icon name="share-o" size="20px" />
-          <van-cell title="分享" style="padding-left: 5px" @click="showShare = true" />
+          <van-icon name="share-o" size="20px"/>
+          <van-cell title="分享" style="padding-left: 5px" @click="showShare = true"/>
           <van-share-sheet
               v-model="showShare"
               title="立即分享给好友"
@@ -25,7 +25,10 @@
         success-text="刷新成功"
     >
       <div class="content">
-        <router-view></router-view>
+        <transition name="slide-fade">
+          <router-view></router-view>
+        </transition>
+
       </div>
     </van-pull-refresh>
 
@@ -45,19 +48,18 @@ import {Toast} from "vant";
 export default {
   name: 'app',
 
-  components:{
-  },
+  components: {},
 
   data() {
     return {
       isLoading: false,
       showShare: false,
       options: [
-        { name: '微信', icon: 'wechat' },
-        { name: '微博', icon: 'weibo' },
-        { name: '复制链接', icon: 'link' },
-        { name: '分享海报', icon: 'poster' },
-        { name: '二维码', icon: 'qrcode' },
+        {name: '微信', icon: 'wechat'},
+        {name: '微博', icon: 'weibo'},
+        {name: '复制链接', icon: 'link'},
+        {name: '分享海报', icon: 'poster'},
+        {name: '二维码', icon: 'qrcode'},
       ],
     };
   },
@@ -71,7 +73,7 @@ export default {
       Toast(option.name);
       this.showShare = false;
     },
-    goback(){
+    goback() {
       this.$router.go(-1);
       console.log('xixiixi')
     },
@@ -88,6 +90,8 @@ export default {
 
 <style lang="scss">
 
+#app{
 
+}
 
 </style>

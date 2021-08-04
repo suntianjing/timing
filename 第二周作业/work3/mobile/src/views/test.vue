@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <van-cell is-link @click="showPopup">
-      <img src="https://img2.baidu.com/it/u=283944626,65800653&fm=26&fmt=auto&gp=0.jpg" alt="">
-    </van-cell>
-    <van-popup position="bottom" round v-model="show" style="height: 40%;">内容</van-popup>
+  <div id="demo">
+    <button @click="show = !show">
+      toggle
+    </button>
+    <transition name="fade">
+      <p v-if="show">hello</p>
+    </transition>
   </div>
 </template>
 
@@ -14,7 +16,8 @@ export default {
 
   data() {
     return {
-      show: false,
+      show:true,
+
     };
   },
 
@@ -23,13 +26,20 @@ export default {
   },
 
   methods: {
-    showPopup() {
-      this.show = true;
-    },
+
   },
 };
 </script>
 
 <style lang="scss" scoped>
+
+#demo{
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+}
 
 </style>
